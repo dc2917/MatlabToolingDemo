@@ -12,7 +12,7 @@ classdef MaxEvenTest < matlab.unittest.TestCase
 
     end
 
-    methods (Test, TestTags = {'Unit'})
+    methods (Test, TestTags = ["Unit"])
 
         function testPositiveInts(test_case)
             % TESTPOSITIVEINTS Check maxEven works for positive integers

@@ -20,9 +20,18 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: pip install -r dev-requirements.txt
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v3
+        with:
+          cache: true
+      - name: Run MATLAB code analyser
+        uses: matlab-actions/run-command@v3
+        with:
+          command: check_code
+          generate-summary: true
       - name: Run pre-commit hooks
         shell: bash
-        run: pre-commit run --all-files
+        run: SKIP=codeIssues pre-commit run --all-files
   test:
     name: Run test suite
     runs-on: ubuntu-latest

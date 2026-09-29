@@ -1,7 +1,0 @@
-line_length: 88
-regex_parameter_name: "[a-z]+(_[a-z]+)*"  # snake_case
-regex_class_name: "([A-Z][a-z]*)+"  # UpperCamelCase
-regex_function_name: "([a-z][A-Z]*)+"  # camelCase
-regex_method_name: "([a-z][A-Z]*)+"  # camelCase
-suppress_rule: "copyright_notice"
-align_round_brackets: false

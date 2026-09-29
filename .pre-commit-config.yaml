@@ -1,19 +1,10 @@
 repos:
   - repo: local
     hooks:
-      - id: mh_style
-        name: mh_style
-        entry: mh_style
-        args: [--fix]
-        files: ^(.*\.m)$
-        language: python
-        additional_dependencies: [miss_hit_core]
-      - id: mh_lint
-        name: mh_lint
-        entry: mh_lint
-        files: ^(.*\.m)$
-        language: python
-        additional_dependencies: [miss_hit]
+      - id: codeIssues
+        name: codeIssues
+        entry: bash -c "matlab -nodesktop -nojvm -nodisplay -r check_code"
+        language: unsupported
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.49.1
     hooks:

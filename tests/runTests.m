@@ -20,5 +20,5 @@ function runTests()
         'Producing', [CoverageReport(report_dir), CoberturaFormat(coverage_file)]);
     runner.addPlugin(coverage_plugin);
 
-    results = runner.run(suite);
+    runner.run(suite);
 end

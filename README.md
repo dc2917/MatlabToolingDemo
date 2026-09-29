@@ -1,11 +1,10 @@
 # MatlabToolingDemo
 
-A repository to demonstrate software engineering tools for MATLAB/Octave.
+A repository to demonstrate software engineering tools for MATLAB.
 
 ## The Tools
 
-- Formatter: [mh_style][mh_style]
-- Linter: [mh_lint][mh_lint]
+- Linter: [matlab.codeIssues][matlab-codeIssues]
 - Pre-commit hooks: [pre-commit][pre-commit]
 - Test framework: [matlab.unittest][matlab-unittest]
 - Code coverage analyser: [matlab.unittest.plugins.CodeCoveragePlugin][coverage-plugin]
@@ -18,7 +17,7 @@ A repository to demonstrate software engineering tools for MATLAB/Octave.
    git clone https://github.com/dc2917/MatlabToolingDemo.git
    ```
 
-1. Install the python tools
+1. Install the development dependencies
 
    ```sh
    python -m venv .venv
@@ -34,16 +33,10 @@ A repository to demonstrate software engineering tools for MATLAB/Octave.
 
 ## Usage
 
-Formatting
-
-```sh
-mh_style .
-```
-
 Linting/static analysis
 
 ```sh
-mh_lint .
+matlab -batch "check_code"
 ```
 
 Pre-commit hooks
@@ -58,8 +51,7 @@ Testing
 matlab -batch "run tests/runTests.m"
 ```
 
-[mh_style]: https://florianschanda.github.io/miss_hit/style_checker.html
-[mh_lint]: https://florianschanda.github.io/miss_hit/lint.html
+[matlab-codeIssues]: https://uk.mathworks.com/help/matlab/ref/codeissues.html
 [pre-commit]: https://pre-commit.com/
 [matlab-unittest]: https://uk.mathworks.com/help/matlab/matlab-unit-test-framework.html
 [coverage-plugin]: https://uk.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html
