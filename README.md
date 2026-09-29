@@ -15,7 +15,7 @@ A repository to demonstrate software engineering tools for MATLAB/Octave.
 1. Clone the repository
 
    ```sh
-   git clone https://github.com/dc2917/MatabToolingDemo.git
+   git clone https://github.com/dc2917/MatlabToolingDemo.git
    ```
 
 1. Install the python tools
