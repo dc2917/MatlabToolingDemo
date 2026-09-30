@@ -9,6 +9,6 @@ function max_even = maxEven(vals)
         max_even
     end
 
-    even_vals = vals(mod(vals, 2) == 0);
-    max_even = max(even_vals);
+    Even_Vals = vals(mod(vals, 2) == 0);
+    max_even = max(Even_Vals)
 end
