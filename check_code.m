@@ -5,5 +5,7 @@ code_issues = codeIssues(...
 
 if ~isempty(code_issues.Issues)
     disp(code_issues.Issues(:,[2,10,6,8,4]));
-    error("Code analyser found issues");
+    error("Code Analyser identified issues");
+else
+    disp("Code Analyser identified no issues");
 end
