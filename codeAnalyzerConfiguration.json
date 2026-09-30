@@ -71,7 +71,7 @@
     "naming" : {
         "variable": {
             "maxLength" : 32, // naming.variable.maxLength
-            "regularExpression" : "(^[a-z][a-zA-Z0-9]*$)|(^[A-Z][a-z0-9]*$)" // naming.variable.regularExpression
+            "regularExpression" : "(^[a-z][a-z0-9]*(_[a-z][a-z0-9]*)*$)|(^[A-Z][A-Z0-9]*(_[A-Z][A-Z0-9]*)*$)" // naming.variable.regularExpression
         },
         "class": {
             "maxLength" : 32 // naming.class.maxLength
