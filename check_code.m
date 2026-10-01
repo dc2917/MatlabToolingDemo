@@ -31,7 +31,7 @@ function writeSummaryToFile(fid, issues)
     fprintf(fid, "# MATLAB Code Analyser Results\n\n");
     if isempty(issues)
         fprintf(fid, "Code Analyser identified no issues\n");
-        return;
+        return
     end
 
     fprintf(fid, "| Severity | Filename | Line start | Column start | Description |\n");

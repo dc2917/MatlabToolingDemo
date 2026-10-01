@@ -9,6 +9,7 @@ on:
 
 jobs:
   qa:
+    name: Run QA checks
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository

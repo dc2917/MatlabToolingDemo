@@ -4,6 +4,7 @@ A repository to demonstrate software engineering tools for MATLAB.
 
 ## The Tools
 
+- Formatter: [mh_style][mh_style]
 - Linter: [matlab.codeIssues][matlab-codeIssues]
 - Pre-commit hooks: [pre-commit][pre-commit]
 - Test framework: [matlab.unittest][matlab-unittest]
@@ -32,6 +33,14 @@ A repository to demonstrate software engineering tools for MATLAB.
    ```
 
 ## Usage
+
+Formatting
+
+- Within a terminal:
+
+  ```sh
+  mh_style .
+  ```
 
 Linting/static analysis
 
@@ -69,6 +78,7 @@ Testing
   run tests/runTests
   ```
 
+[mh_style]: https://florianschanda.github.io/miss_hit/style_checker.html
 [matlab-codeIssues]: https://uk.mathworks.com/help/matlab/ref/codeissues.html
 [pre-commit]: https://pre-commit.com/
 [matlab-unittest]: https://uk.mathworks.com/help/matlab/matlab-unit-test-framework.html
