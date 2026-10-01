@@ -35,21 +35,39 @@ A repository to demonstrate software engineering tools for MATLAB.
 
 Linting/static analysis
 
-```sh
-matlab -batch "check_code"
-```
+- Within a terminal:
+
+  ```sh
+  matlab -batch check_code
+  ```
+
+- Within the MATLAB IDE:
+
+  ```matlab
+  check_code
+  ```
 
 Pre-commit hooks
 
-```sh
-pre-commit run --all-files
-```
+- Within a terminal:
+
+  ```sh
+  pre-commit run --all-files
+  ```
 
 Testing
 
-```sh
-matlab -batch "run tests/runTests.m"
-```
+- Within a terminal:
+
+  ```sh
+  matlab -batch "run tests/runTests"
+  ```
+
+- Within the MATLAB IDE:
+
+  ```matlab
+  run tests/runTests
+  ```
 
 [matlab-codeIssues]: https://uk.mathworks.com/help/matlab/ref/codeissues.html
 [pre-commit]: https://pre-commit.com/
