@@ -2,13 +2,27 @@
 
 A repository to demonstrate software engineering tools for MATLAB.
 
+Many programming languages have collections of development tools for dependency
+management, packaging, code formatting, linting, testing and so on. These tools
+are essential for the successful collaborative development of software: they
+make developers' lives easier, removing the need to manually perform mundane or
+laborious tasks, and make collaboration smoother with all developers using the
+same toolkits and following consistent conventions.
+
+Unfortunately, the use of such tooling is largely absent from MATLAB projects,
+perhaps in part because of how MATLAB is used in practice compared to other
+programming languages, but this need not be the case. The aim of this repository
+is, therefore, to demonstrate how demonstrate how such tools can be used in a
+MATLAB project.
+
 ## The Tools
 
 - Formatter: [mh_style][mh_style]
 - Linter: [matlab.codeIssues][matlab-codeIssues]
 - Pre-commit hooks: [pre-commit][pre-commit]
 - Test framework: [matlab.unittest][matlab-unittest]
-- Code coverage analyser: [matlab.unittest.plugins.CodeCoveragePlugin][coverage-plugin]
+- Code coverage analyser:
+  [matlab.unittest.plugins.CodeCoveragePlugin][coverage-plugin]
 
 ## Installation
 
