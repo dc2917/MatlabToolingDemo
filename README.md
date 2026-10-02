@@ -61,13 +61,13 @@ Linting/static analysis
 - Within a terminal:
 
   ```sh
-  matlab -batch check_code
+  matlab -batch "buildtool check"
   ```
 
 - Within the MATLAB IDE:
 
   ```matlab
-  check_code
+  buildtool check
   ```
 
 Pre-commit hooks
@@ -83,13 +83,13 @@ Testing
 - Within a terminal:
 
   ```sh
-  matlab -batch "run tests/runTests"
+  matlab -batch "buildtool test"
   ```
 
 - Within the MATLAB IDE:
 
   ```matlab
-  run tests/runTests
+  buildtool test
   ```
 
 [mh_style]: https://florianschanda.github.io/miss_hit/style_checker.html

@@ -1,0 +1,18 @@
+function plan = buildfile
+    % BUILDFILE Define the build tasks
+    import matlab.buildtool.tasks.*
+
+    plan = buildplan();
+
+    plan("clean") = CleanTask;
+    plan("check") = CodeIssuesTask( ...
+        ["src", "tests"], Results = "code-issues/results.sarif");
+    plan("test-unit") = TestTask( ...
+        SourceFiles = ["src"], Tag = "Unit", TestResults = "test-results/results.xml", ...
+        CodeCoverageResults = "code-coverage/results.xml");
+    plan("test-regression") = TestTask( ...
+        SourceFiles = ["src"], Tag = "Regression", TestResults = "test-results/results.xml", ...
+        CodeCoverageResults = "code-coverage/results.xml");
+
+    plan.DefaultTasks = ["check" "test"];
+end

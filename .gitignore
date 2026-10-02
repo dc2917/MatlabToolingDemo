@@ -1,2 +1,4 @@
-coverage.xml
-htmlcov/
+.buildtool/
+code-coverage/
+code-issues/
+test-results/

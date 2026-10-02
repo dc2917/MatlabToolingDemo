@@ -10,7 +10,7 @@ repos:
         additional_dependencies: [miss_hit_core]
       - id: codeIssues
         name: codeIssues
-        entry: bash -c "matlab -nodesktop -nojvm -nodisplay -r check_code"
+        entry: bash -c "matlab -nodesktop -nojvm -nodisplay -r 'buildtool check'"
         files: ^(.*\.m)$
         language: unsupported
   - repo: https://github.com/igorshubovych/markdownlint-cli
