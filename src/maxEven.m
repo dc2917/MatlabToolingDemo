@@ -1,6 +1,13 @@
 function max_even = maxEven(vals)
-    % MAXEVEN Return the maximum even number in an array
-    %   Takes the input array, filters out odd values and returns the maximum
+    % Return the maximum odd number in an array
+    %
+    % Takes the input array, filters out even values and returns the maximum
+    %
+    % Args:
+    %     vals: Array of values to find the maximum even value from.
+    %
+    % Returns:
+    %     The maximum even value from the input array
     arguments (Input)
         vals
     end

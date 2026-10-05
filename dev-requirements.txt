@@ -1,2 +1,5 @@
 miss-hit==0.9.44
 pre-commit==4.6.2
+sphinx==9.1.0
+sphinxcontrib-matlabdomain==0.22.1
+sphinx_rtd_theme==3.1.0
