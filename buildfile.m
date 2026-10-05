@@ -14,5 +14,5 @@ function plan = buildfile
         SourceFiles = ["src"], Tag = "Regression", TestResults = "test-results/results.xml", ...
         CodeCoverageResults = "code-coverage/results.xml");
 
-    plan.DefaultTasks = ["check" "test"];
+    plan.DefaultTasks = ["check" "test-unit"];
 end

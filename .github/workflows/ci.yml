@@ -26,9 +26,10 @@ jobs:
         with:
           cache: true
       - name: Run MATLAB code analyser
-        uses: matlab-actions/run-command@v3
+        uses: matlab-actions/run-build@v3
         with:
-          command: buildtool check
+          tasks: check
+          startup-options: -nojvm
           generate-summary: true
       - name: Run pre-commit hooks
         shell: bash
@@ -43,13 +44,9 @@ jobs:
         uses: matlab-actions/setup-matlab@v3
         with:
           cache: true
-      - name: Run MATLAB unit tests
-        uses: matlab-actions/run-command@v3
+      - name: Run MATLAB unit and regression tests
+        uses: matlab-actions/run-build@v3
         with:
-          command: buildtool test-unit
-          generate-summary: true
-      - name: Run MATLAB regression tests
-        uses: matlab-actions/run-command@v3
-        with:
-          command: buildtool test-regression
+          tasks: test-unit test-regression
+          startup-options: -nojvm
           generate-summary: true
