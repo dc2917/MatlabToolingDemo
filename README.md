@@ -12,8 +12,7 @@ same toolkits and following consistent conventions.
 Unfortunately, the use of such tooling is largely absent from MATLAB projects,
 perhaps in part because of how MATLAB is used in practice compared to other
 programming languages, but this need not be the case. The aim of this repository
-is, therefore, to demonstrate how demonstrate how such tools can be used in a
-MATLAB project.
+is, therefore, to demonstrate how such tools can be used in a MATLAB project.
 
 ## The Tools
 
