@@ -64,7 +64,7 @@ Linting/static analysis
   matlab -batch "buildtool check"
   ```
 
-- Within the MATLAB IDE:
+- From the MATLAB command line:
 
   ```matlab
   buildtool check
@@ -83,13 +83,13 @@ Testing
 - Within a terminal:
 
   ```sh
-  matlab -batch "buildtool test"
+  matlab -batch "buildtool test-unit test-regression"
   ```
 
-- Within the MATLAB IDE:
+- From the MATLAB command line:
 
   ```matlab
-  buildtool test
+  buildtool test-unit test-regression
   ```
 
 [mh_style]: https://florianschanda.github.io/miss_hit/style_checker.html
