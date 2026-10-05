@@ -23,6 +23,8 @@ MATLAB project.
 - Test framework: [matlab.unittest][matlab-unittest]
 - Code coverage analyser:
   [matlab.unittest.plugins.CodeCoveragePlugin][coverage-plugin]
+- API documentation builder:
+  [Sphinx][sphinx] with [matlabdomain][matlabdomain]
 
 ## Installation
 
@@ -97,3 +99,5 @@ Testing
 [pre-commit]: https://pre-commit.com/
 [matlab-unittest]: https://uk.mathworks.com/help/matlab/matlab-unit-test-framework.html
 [coverage-plugin]: https://uk.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html
+[sphinx]: https://www.sphinx-doc.org
+[matlabdomain]: https://sphinxcontrib-matlabdomain.readthedocs.io/
