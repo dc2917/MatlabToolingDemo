@@ -1,7 +1,7 @@
 Installation
 ============
 
-In addition to MALTAB, the requirements for using MatlabToolingDemo are `Git`_ and
+In addition to MATLAB, the requirements for using MatlabToolingDemo are `Git`_ and
 `Python`_.
 
 Assuming you have these installed, first, clone the repository::
