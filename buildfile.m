@@ -21,6 +21,7 @@ function plan = buildfile
 end
 
 function runCodeIssues
+    % RUNCODEISSUES Run codeIssues and write output
 
     % Run code analyser on all files in src and tests directory
     code_issues = codeIssues( ...
@@ -29,13 +30,13 @@ function runCodeIssues
         IncludeSubfolders = true);
     issues = code_issues.Issues;
 
-    % Write to GitHub summary file if running in GitHub Actions
-    gh_summary_env = getenv('GITHUB_STEP_SUMMARY');
-    if ~isempty(gh_summary_env)
-        fid = fopen(gh_summary_env, "a");
-        writeSummaryToFile(fid, issues);
-        fclose(fid);
+    % Write to file
+    if ~isfolder("code-issues")
+        mkdir("code-issues");
     end
+    fid = fopen("code-issues/results.md", "w");
+    writeSummaryToFile(fid, issues);
+    fclose(fid);
 
     % Write to stdout
     writeSummaryToFile(1, issues);

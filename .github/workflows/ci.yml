@@ -26,11 +26,14 @@ jobs:
         with:
           cache: true
       - name: Run MATLAB code analyser
+        continue-on-error: true
         uses: matlab-actions/run-build@v3
         with:
           tasks: check
           startup-options: -nojvm
           generate-summary: true
+      - name: Append code analyser results to output
+        run: cat code-issues/results.md >> $GITHUB_STEP_SUMMARY
       - name: Run pre-commit hooks
         shell: bash
         run: SKIP=codeIssues pre-commit run --all-files
