@@ -41,7 +41,9 @@ function runCodeIssues(~)
     writeSummaryToFile(1, issues);
 
     if ~isempty(issues)
-        exit(1);
+        errorStruct.message = 'Code Analyser identified issues.';
+        errorStruct.identifier = 'runCodeIssues:issuesFound';
+        error(errorStruct);
     end
 end
 
