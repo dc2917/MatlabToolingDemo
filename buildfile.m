@@ -1,5 +1,9 @@
 function plan = buildfile
-    % BUILDFILE Define the build tasks
+    % Define the build tasks
+    % Creates the individual tasks to be run by buildtool
+    %
+    % Returns:
+    %     The buildplan containing the tasks
     import matlab.buildtool.Task
     import matlab.buildtool.tasks.*
 
@@ -21,7 +25,7 @@ function plan = buildfile
 end
 
 function runCodeIssues
-    % RUNCODEISSUES Run codeIssues and write output
+    % Run codeIssues and write output
 
     % Run code analyser on all files in src and tests directory
     code_issues = codeIssues( ...
@@ -49,8 +53,12 @@ function runCodeIssues
 end
 
 function writeSummaryToFile(fid, issues)
-    % WRITESUMMARYTOFILE Write a codeIssues summary table to a file
+    % Write a codeIssues summary table to a file
     %   Takes the issues table, and if issues found, iterate over them and write to file
+    %
+    % Args:
+    %     fid: The identifier of the file to write the summary to
+    %     issues: The table of issues identified by codeIssues
     arguments (Input)
         fid
         issues

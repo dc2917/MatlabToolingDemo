@@ -1,10 +1,10 @@
 classdef MaxEvenTest < matlab.unittest.TestCase
-    % MAXEVENTEST Unit tests for the maxEven function
+    % Unit tests for the maxEven function
 
     methods (TestClassSetup)
 
         function addSourceToPath(test_case)
-            % ADDSOURCETOPATH Make the function under test available
+            % Make the function under test available
             here = fileparts(mfilename('fullpath'));
             src_dir = fullfile(here, '..', 'src');
             test_case.applyFixture(matlab.unittest.fixtures.PathFixture(src_dir));
@@ -15,7 +15,7 @@ classdef MaxEvenTest < matlab.unittest.TestCase
     methods (Test, TestTags = ["Unit"])
 
         function testPositiveInts(test_case)
-            % TESTPOSITIVEINTS Check maxEven works for positive integers
+            % Check maxEven works for positive integers
             actual = maxEven([1, 2, 3, 4, 5, 6]);
             expected = 6;
 
@@ -23,7 +23,7 @@ classdef MaxEvenTest < matlab.unittest.TestCase
         end
 
         function testNegativeInts(test_case)
-            % TESTNEGATIVEINTS Check maxEven works for negative integers
+            % Check maxEven works for negative integers
             actual = maxEven([-1, -2, -3, -4, -5, -6]);
             expected = -2;
 
@@ -31,7 +31,7 @@ classdef MaxEvenTest < matlab.unittest.TestCase
         end
 
         function testFloats(test_case)
-            % TESTFLOATS Check maxEven for floating-point numbers
+            % Check maxEven for floating-point numbers
             actual = maxEven([-1.2, 3.4, -5.6, 7.8]);
             expected = double.empty(1, 0);
 
@@ -39,7 +39,7 @@ classdef MaxEvenTest < matlab.unittest.TestCase
         end
 
         function testEmpty(test_case)
-            % TESTEMPTY Check maxEven for empty input
+            % Check maxEven for empty input
             actual = maxEven([]);
             expected = double.empty(0, 0);
 
